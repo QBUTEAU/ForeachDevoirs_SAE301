@@ -1,10 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-if(!localStorage.getItem("id")){
-    localStorage.destroy();
-    window.location = "/login";
-    }
-
     fetch("../assets/json/user.json")
         .then(response => response.json())
         .then(data => {
@@ -19,7 +14,11 @@ var userId = localStorage.getItem("id");
                 }
             });
         })
-
+        .catch(error => {
+            console.error('Une erreur s\'est produite lors de la récupération des données : ', error);
+            localStorage.removeItem("id");
+            window.location = "/login";
+        });
 
 });
 

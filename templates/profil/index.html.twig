@@ -6,9 +6,10 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/profil.css') }}">
 
-<body>
+<body style="flex-container">
     <nav class="navbar">
-        <div class="navbar__liens">
+        <div class="navbar__liens flex-container flex-column justify-content-between">
+            <div>
             <ul>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 576 512">
@@ -38,10 +39,11 @@
                     <a href="">Agenda</a>
                 </li>
             </ul>
-        </div>
-        <div class="navbar__profil">
-            <div class="navbar-profil__img"></div>
-            <p>Bonjour Quentin !</p>
+            </div>
+            <div class="navbar__profil">
+                <div id="img" class="navbar-profil__img"></div>
+                <p id="username"></p>
+            </div>
         </div>
     </nav>
     <section class="flex-container justify-content-center flex-column align-items-center">
@@ -49,9 +51,9 @@
         <div class="profil flex-container justify-content-center flex-column align-items-center">
            <div class="profil__img"></div>
            <h3 class="profil__nom">Quentin BUTEAU</h3>
-           <div class="profil__classe"><p>CM S3</p> | <p>TP A</p> | <p>TD AB</p></div>
+           <div class="profil__classe flex-container align-items-center"><p>CM S3</p> | <p>TP A</p> | <p>TD AB</p></div>
            <h5>quentin.buteau@etudiant.univ-reims.fr</h5>
         </div>
     </section>
-
+</body>
 {% endblock %}

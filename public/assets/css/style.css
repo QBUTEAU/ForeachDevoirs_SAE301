@@ -1,8 +1,8 @@
 @import "main.css";
+@import "layout.css";
 
 body{
     position: relative;
-    display: flex;
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
@@ -10,56 +10,7 @@ body{
     overflow-y: auto; /* Permet le défilement vertical */
 }
 
-.navbar{
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    padding: 0 20px;
-}
-.navbar ul{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-}
-.navbar ul li{
-    margin: 25px 0;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.navbar a{
-    text-decoration: none;
-    color: white;
-}
-.navbar__liens{
-    height: 80vh;
-}
-.navbar__profil{
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    gap: 10px;
-}
-.navbar-profil__img{
-    height: 25px;
-    width: 25px;
-    background-color: white;
-    border-radius: 50%;
-}
-
 section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 80%;
     min-height: 100vh;
     background-color: rgb(191, 191, 191);
@@ -74,18 +25,12 @@ h1 {
 }
 
 .nom-proposer{
-    display: flex;
     width: 80%;
-    justify-content: space-between;
-    align-items: center;
 }
 .nom-proposer__button{
     text-decoration: dashed;
 }
 .nom-proposer__button > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     font-size: 15px;
     background-color: black;
