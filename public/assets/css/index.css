@@ -1,0 +1,46 @@
+@import "main.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+
+}
+
+.connexion_form {
+    max-width: 500px;
+    background: #948e8e;
+    height: auto;
+    padding: 40px 60px;
+    border-radius: 2px;
+    margin: 0 20px;
+}
+
+.connexion_form > .flex-container > input[type="text"], .connexion_form > .flex-container > input[type="password"] {
+    height: 50px;
+    border: 1px solid #9e9e9e;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+.connexion_form > .flex-container > input[type="submit"] {
+    background: #cb3535;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    height: 40px;
+}
+
+.connexion_form > .flex-container > label {
+    color: white;
+}
