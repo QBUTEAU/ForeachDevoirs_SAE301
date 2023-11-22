@@ -3,7 +3,6 @@
 
 body{
     position: relative;
-    display: flex;
     margin: 0;
     padding: 0;
     font-family: "Montserrat";
@@ -12,10 +11,6 @@ body{
 }
 
 section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 80%;
     min-height: 100vh;
     background-color: rgb(191, 191, 191);
@@ -30,18 +25,12 @@ h1 {
 }
 
 .nom-proposer{
-    display: flex;
     width: 80%;
-    justify-content: space-between;
-    align-items: center;
 }
 .nom-proposer__button{
     text-decoration: dashed;
 }
 .nom-proposer__button > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     font-size: 15px;
     background-color: black;
