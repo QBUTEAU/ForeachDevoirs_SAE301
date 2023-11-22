@@ -4,8 +4,8 @@
       "id": "mmi22d11",
       "prenom": "Corentin",
       "nomDeFamille": "Nelhomme",
-      "groupeTP": "D",
-      "groupeTD": "CD",
+      "groupeTP": "B",
+      "groupeTD": "AB",
       "password": "1234",
       "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": true
@@ -14,8 +14,8 @@
       "id": "mmi22h12",
       "prenom": "Richard",
       "nomDeFamille": "Quinn",
-      "groupeTP": "H",
-      "groupeTD": "GH",
+      "groupeTP": "B",
+      "groupeTD": "AB",
       "password": "1234",
       "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": false
@@ -24,8 +24,18 @@
       "id": "mmi22c03",
       "prenom": "Quentin",
       "nomDeFamille": "Buteau",
-      "groupeTP": "C",
-      "groupeTD": "CD",
+      "groupeTP": "A",
+      "groupeTD": "AB",
+      "password": "1234",
+      "image": "https://www.w3schools.com/howto/img_avatar.png",
+      "admin": false
+    },
+    {
+      "id": "mmi22h13",
+      "prenom": "Emilien",
+      "nomDeFamille": "Rozier",
+      "groupeTP": "A",
+      "groupeTD": "AB",
       "password": "1234",
       "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": false
