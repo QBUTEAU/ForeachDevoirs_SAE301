@@ -7,6 +7,7 @@
       "groupeTP": "A",
       "groupeTD": "G1",
       "password": "1234",
+      "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": true
     },
     {
@@ -16,6 +17,7 @@
       "groupeTP": "B",
       "groupeTD": "G2",
       "password": "1234",
+      "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": false
     },
     {
@@ -25,6 +27,7 @@
       "groupeTP": "A",
       "groupeTD": "G1",
       "password": "1234",
+      "image": "https://www.w3schools.com/howto/img_avatar.png",
       "admin": false
     }
   ]

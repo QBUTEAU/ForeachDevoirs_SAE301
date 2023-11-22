@@ -2,13 +2,23 @@
 
 {% block title %}Accueil - SAE 301{% endblock %}
 
-{% block body %}
+{% block stylesheets %}
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/index.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+
 <body>
     <nav class="navbar">
-        <div class="navbar__liens">
+        <div class="navbar__liens flex-container flex-column justify-content-between">
+            <div>
             <ul>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 576 512">
@@ -38,15 +48,16 @@
                     <a href="">Agenda</a>
                 </li>
             </ul>
-        </div>
-        <div class="navbar__profil">
-            <div class="navbar-profil__img"></div>
-            <p>Bonjour Quentin !</p>
+            </div>
+            <div class="navbar__profil">
+                <div id="img" class="navbar-profil__img"></div>
+                <p id="username"></p>
+            </div>
         </div>
     </nav>
     <section>
         <div class="nom-proposer">
-            <h1>Bonjour Quentin !</h1>
+            <h1 id="hello"></h1>
             <a class="nom-proposer__button" href="{{ asset('/ajouter/rendu')}}">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
