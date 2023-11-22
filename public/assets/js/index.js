@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-if(!localStorage.getItem("id")){
-    localStorage.destroy();
+if(!localStorage.getItem("id") || localStorage.getItem("id") === ""){
+    localStorage.setItem("id", "");
+    localStorage.removeItem("id")
     window.location = "/login";
     }
 
