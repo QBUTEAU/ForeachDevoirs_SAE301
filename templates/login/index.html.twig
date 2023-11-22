@@ -2,12 +2,22 @@
 
 {% block title %}Hello LoginController!{% endblock %}
 
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+        {% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('assets/js/check.js') }}" defer></script>
+
+{% endblock %}
+
 {% block body %}
-<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 
     <div class="flex-container align-items-center justify-content-center max-height">
         <div class="flex-container flex-column connexion_form gap20">
-            <h1>Université de Reims Champagne Ardenne</h1>
+            <img id="large" src="https://cas.univ-reims.fr/cas/css/images/logo.png" alt="Logo Univ">
+            <img id="small" src="https://cas.univ-reims.fr/cas/css/images/logo-small.png" alt="Logo Small">
 
             <div class="flex-container flex-column gap10">
                 <label for="id">Identifiant</label>
@@ -20,7 +30,7 @@
             </div>
 
             <div class="flex-container flex-column align-items-center justify-content-center">
-                <input type="submit" value="Connexion">
+                <input type="submit" id="submit" value="Connexion">
             </div>
 
         </div>

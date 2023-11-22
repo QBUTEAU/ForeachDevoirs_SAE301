@@ -1,27 +1,30 @@
 {
   "utilisateurs": [
     {
-      "id": 1,
+      "id": "mmi22d11",
       "prenom": "Jean",
       "nomDeFamille": "Dupont",
       "groupeTP": "A",
       "groupeTD": "G1",
+      "password": "1234",
       "admin": true
     },
     {
-      "id": 2,
+      "id": "mmi22h12",
       "prenom": "Marie",
       "nomDeFamille": "Martin",
       "groupeTP": "B",
       "groupeTD": "G2",
+      "password": "1234",
       "admin": false
     },
     {
-      "id": 3,
+      "id": "mmi22h13",
       "prenom": "Pierre",
       "nomDeFamille": "Lefevre",
       "groupeTP": "A",
       "groupeTD": "G1",
+      "password": "1234",
       "admin": false
     }
   ]
