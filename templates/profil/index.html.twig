@@ -8,7 +8,8 @@
 
 <body>
     <nav class="navbar">
-        <div class="navbar__liens">
+        <div class="navbar__liens flex-container flex-column justify-content-between">
+            <div>
             <ul>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 576 512">
@@ -38,10 +39,11 @@
                     <a href="">Agenda</a>
                 </li>
             </ul>
-        </div>
-        <div class="navbar__profil">
-            <div class="navbar-profil__img"></div>
-            <p>Bonjour Quentin !</p>
+            </div>
+            <div class="navbar__profil">
+                <div id="img" class="navbar-profil__img"></div>
+                <p id="username"></p>
+            </div>
         </div>
     </nav>
     <section class="flex-container justify-content-center flex-column align-items-center">
