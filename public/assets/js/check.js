@@ -30,3 +30,10 @@ document.getElementById("submit").addEventListener("click", function(event){
     }
 });
 
+document.addEventListener("DOMContentLoaded", function(event){
+console.log(localStorage.getItem("id"));
+
+if(localStorage.getItem("id")){
+        console.log("redirection");
+    }
+})
