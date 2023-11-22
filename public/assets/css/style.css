@@ -78,6 +78,9 @@ h1 {
     align-items: center;
 }
 .nom-proposer__button{
+    text-decoration: dashed;
+}
+.nom-proposer__button > div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +91,7 @@ h1 {
     font-weight: bold;
     padding: 7px 20px;
     border-radius: 10px;
+    text-decoration: dashed;
 }
 .nom-proposer__button p{
     margin: 0;
