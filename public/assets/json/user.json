@@ -1,0 +1,28 @@
+{
+  "utilisateurs": [
+    {
+      "id": 1,
+      "prenom": "Jean",
+      "nomDeFamille": "Dupont",
+      "groupeTP": "A",
+      "groupeTD": "G1",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "prenom": "Marie",
+      "nomDeFamille": "Martin",
+      "groupeTP": "B",
+      "groupeTD": "G2",
+      "admin": false
+    },
+    {
+      "id": 3,
+      "prenom": "Pierre",
+      "nomDeFamille": "Lefevre",
+      "groupeTP": "A",
+      "groupeTD": "G1",
+      "admin": false
+    }
+  ]
+}
