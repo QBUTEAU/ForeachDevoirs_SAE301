@@ -1,4 +1,4 @@
-@import "main.css";
+@import 'main.css';
 
 body{
     position: relative;
@@ -59,41 +59,52 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 60px;
     width: 80%;
     min-height: 100vh;
     background-color: rgb(191, 191, 191);
     margin-left: 20%;
 }
 
+.profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: max-content;
+    gap: 15px;
+    border: 2px black solid;
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+
+}
+.profil__img{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+}
+.profil__classe{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 h1 {
-    color: white;
     font-size: 2rem;
     margin: 0;
     text-align: center;
 }
-
-.nom-proposer{
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
+h3{
+    font-size: 1.25rem;
+    margin : 0;
 }
-.nom-proposer__button{
-    text-decoration: dashed;
+h5{
+    margin : 0;
 }
-.nom-proposer__button > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    padding: 7px 20px;
-    border-radius: 10px;
-    text-decoration: dashed;
-}
-.nom-proposer__button p{
+p{
+    font-size: 13px;
     margin: 0;
+    font-weight: 500;
 }
