@@ -1,9 +1,9 @@
-document.getElementById("submit").addEventListener("click", function(event){
+document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault();
     const id = document.getElementById("id").value;
     const password = document.getElementById("password").value;
 
-    if(id === "" || password === ""){
+    if (id === "" || password === "") {
         alert("Veuillez remplir tous les champs");
     } else {
         fetch("../assets/json/user.json")
@@ -12,16 +12,26 @@ document.getElementById("submit").addEventListener("click", function(event){
                 let authentificationReussie = false;
 
                 data["utilisateurs"].forEach(user => {
-                    if(user.id === id && user.password === password){
+                    if (user.id === id && user.password === password) {
                         authentificationReussie = true;
                     }
                 });
-
+                var error = document.getElementById("error");
+                var sucess = document.getElementById("sucess");
                 if (authentificationReussie) {
-                    localStorage.setItem("id", id);
-                    window.location = "../";
+
+                    error.style.display = "none";
+                    sucess.style.display = "block";
+                    sucess.innerHTML = "Connexion réussie, redirection en cours...";
+                    setTimeout(function () {
+                        localStorage.setItem("id", id);
+                        window.location = "../";
+                    }, 3000);
+
                 } else {
-                    alert("Identifiant ou mot de passe incorrect");
+                    error.style.display = "block";
+                    sucess.style.display = "none";
+                    error.innerHTML = "Identifiant ou mot de passe incorrect";
                 }
             })
             .catch(error => {
@@ -30,10 +40,10 @@ document.getElementById("submit").addEventListener("click", function(event){
     }
 });
 
-document.addEventListener("DOMContentLoaded", function(event){
-console.log(localStorage.getItem("id"));
+document.addEventListener("DOMContentLoaded", function (event) {
+    console.log(localStorage.getItem("id"));
 
-if(localStorage.getItem("id")){
+    if (localStorage.getItem("id")) {
         window.location = "../";
     }
 })
