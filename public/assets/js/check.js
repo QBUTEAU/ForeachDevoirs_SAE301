@@ -2,6 +2,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault();
     const id = document.getElementById("id").value;
     const password = document.getElementById("password").value;
+    var userds = "";
 
     if (id === "" || password === "") {
         alert("Veuillez remplir tous les champs");
@@ -14,7 +15,9 @@ document.getElementById("submit").addEventListener("click", function (event) {
                 data["utilisateurs"].forEach(user => {
                     if (user.id === id && user.password === password) {
                         authentificationReussie = true;
+                        userds = user;
                     }
+
                 });
                 var error = document.getElementById("error");
                 var sucess = document.getElementById("sucess");
@@ -25,6 +28,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
                     sucess.innerHTML = "Connexion réussie, redirection en cours...";
                     setTimeout(function () {
                         localStorage.setItem("id", id);
+                        localStorage.setItem("user", JSON.stringify(userds));
                         window.location = "../";
                     }, 3000);
 

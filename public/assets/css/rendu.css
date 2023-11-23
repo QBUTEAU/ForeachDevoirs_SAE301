@@ -1,55 +1,68 @@
 @import"main.css";
 @import "layout.css";
+@import "main.css";
+@import "layout.css";
 
-*{
-    padding: 0px;
-    margin: 0px;
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
-h1{
-    text-align: center;
-    margin: 10px;
+section{
+    width: 80%;
+    min-height: 100vh;
+    margin-left: 20%;
 }
 
 form {
-    width: 300px;
+    width: 30%;
     margin: 0 auto;
 }
 
 label {
     display: block;
     margin-top: 10px;
+    padding: 0;
+}
+
+input{
+    padding: 0;
 }
 
 input[type="text"],
 input[type="date"],
 input[type="url"] {
-    width: 100%;
+    width: calc(100% - 5px);
     padding: 5px;
     border: 1px solid #ccc;
     background-color: #ccc;
-    margin: 5px;
+    margin: 7px 0;
 }
 
-button {
-    display: block;
-    width: 70%;
-    padding: 5px;
-  margin: 10px auto;
-    background-color:D9D9D9;
-    color: black;
-    border: none;
+label span{
+    color: red;
+    margin-left: 5px;
+}
+
+select{
+    margin-bottom: 7px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 25px;
+    border-radius: 10px;
     cursor: pointer;
-    display: flex;
+    border: none;
     text-align: center;
-    justify-content: center;
-    border-radius: 10px ;
-}
-
-button:hover {
-    background-color: #ccc;
+    margin-top: 30px;
+    margin: 0 auto;
 }
