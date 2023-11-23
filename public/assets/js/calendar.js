@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
             fetch("../assets/json/events.json")
                 .then(response => response.json())
                 .then(data => {
-                    var userTp = localStorage.getItem('tp')
-                    console.log(userTp)
+                    var user = localStorage.getItem('user')
+                    const userJson = JSON.parse(user)
+                    const tp = userJson.groupeTP
 
                     data.forEach(cours => {
-                        if (cours.tp === userTp) {
+                        if (cours.tp === tp) {
                             calendar.addEvent(cours)
                         }
                     })
