@@ -103,3 +103,7 @@
 input:focus, textarea:focus, select:focus {
     outline: none;
 }
+
+#search {
+    cursor: pointer;
+}

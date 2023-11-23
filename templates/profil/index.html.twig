@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="{{ asset('assets/css/profil.css') }}">
 {% endblock %}
 
+{% block javascripts %}
+<script src="{{ asset('assets/js/profil.js') }}"></script>
+{% endblock %}
+
 {% block body %}
 
 
@@ -44,7 +48,7 @@
             </ul>
             </div>
             <div class="navbar__profil">
-                <div id="img" class="navbar-profil__img"></div>
+                <div class="navbar-profil__img img"></div>
                 <p id="username"></p>
             </div>
         </div>
@@ -52,10 +56,10 @@
     <section class="flex-container justify-content-center flex-column align-items-center">
         <h1>Profil</h1>
         <div class="profil flex-container justify-content-center flex-column align-items-center">
-           <div class="profil__img"></div>
-           <h3 class="profil__nom">Quentin BUTEAU</h3>
-           <div class="profil__classe flex-container align-items-center"><p>CM S3</p> | <p>TP A</p> | <p>TD AB</p></div>
-           <h5>quentin.buteau@etudiant.univ-reims.fr</h5>
+           <div class="profil__img img" ></div>
+           <h3 id="name" class="profil__nom"></h3>
+           <div class="profil__classe flex-container align-items-center"><p id="season">CM S3</p> | <p id="tp">TP A</p> | <p id="td">TD AB</p></div>
+           <h5 id="email">quentin.buteau@etudiant.univ-reims.fr</h5>
         </div>
     </section>
 </body>

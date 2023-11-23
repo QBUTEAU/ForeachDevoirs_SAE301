@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    if(!localStorage.getItem("id") || localStorage.getItem("id") === ""){
-        localStorage.setItem("id", "");
-        localStorage.removeItem("id")
-        window.location = "/login";
+    if(!window.location.href.includes("login")) {
+        if (!localStorage.getItem("id") || localStorage.getItem("id") === "") {
+            localStorage.setItem("id", "");
+            localStorage.removeItem("id")
+            window.location = "/login";
+        }
     }
-
 
 });
 
@@ -33,6 +34,24 @@ document.getElementById("search").addEventListener("click", function (event) {
     input.style.border = "none";
     input.style.padding = "0 20px";
     input.style.fontSize = "18px";
+
+    var cross = document.createElement("i");
+    cross.id = "cross";
+    cross.classList.add("fas");
+    cross.classList.add("fa-times");
+    cross.style.position = "absolute";
+    cross.style.top = "50px";
+    cross.style.right = "5%";
+    cross.style.transform = "translate(-50%, -50%)";
+    cross.style.fontSize = "30px";
+    cross.style.color = "white";
+    cross.style.cursor = "pointer";
+
+    cross.addEventListener("click", function (event) {
+        document.body.removeChild(background);
+    })
+
+    background.appendChild(cross);
 
     background.appendChild(input);
     document.body.appendChild(background);
