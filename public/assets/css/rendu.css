@@ -36,11 +36,20 @@ input{
 input[type="text"],
 input[type="date"],
 input[type="url"] {
-    width: 100%;
+    width: calc(100% - 5px);
     padding: 5px;
     border: 1px solid #ccc;
     background-color: #ccc;
     margin: 7px 0;
+}
+
+label span{
+    color: red;
+    margin-left: 5px;
+}
+
+select{
+    margin-bottom: 7px;
 }
 
 button{

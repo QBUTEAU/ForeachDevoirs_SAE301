@@ -49,38 +49,34 @@
     <section class="flex-container align-items-center justify-content-center flex-column">
     <h1>Proposer un rendu :</h1>
     <form>
-        <label for="date"></label>
+        <label for="date">Date :<span>*</span></label>
         <input type="date" id="date" name="date" required>
 
-        <label for="subject"></label>
-        <input type="text" id="subject" name="subject" required placeholder="Module">
+        <label for="subject">Module :<span>*</span></label>
+        <input type="text" id="subject" name="subject" required placeholder="WR112 - Intégration">
 
-        <label for="details"></label>
-        <input type="text" id="details" name="details" placeholder="Détails" required>
+        <label for="details">Détails :<span>*</span></label>
+        <input type="text" id="details" name="details" placeholder="Rendre le site web" required>
 
-        <label for="renderTypeSelect">Type de rendu :</label>
+        <label for="renderTypeSelect">Type de rendu :<span>*</span></label>
         <select id="renderTypeSelect" name="renderTypeSelect">
             <option value=".ai">.ai</option>
             <option value=".psd">.psd</option>
             <option value=".pdf">.pdf</option>
             <option value=".zip">.zip</option>
-            <option value=".xd">.xd</option>
             <option value=".png">.png</option>
             <option value=".jpg">.jpg</option>
-            <option value=".gif">.gif</option>
             <option value=".svg">.svg</option>
             <option value=".mp4">.mp4</option>
-            <option value=".mov">.mov</option>
-            <option value=".wav">.wav</option>
             <option value=".mp3">.mp3</option>
             <option value=".html">.html</option>
             <option value=".css">.css</option>
             <option value=".js">.js</option>
-            <option value=".prproj">.prproj</option>
-</select>
+            <option value="partiel">Evaluation sur table</option>
+        </select>
 
-        <label for="moodleLink"></label>
-        <input type="url" id="moodleLink" name="moodleLink" placeholder="Lien du moodle (pas obligatoire)">
+        <label for="moodleLink">Lien du rendu</label>
+        <input type="url" id="moodleLink" name="moodleLink" placeholder="https://lien-du-rendu.fr">
 
         <button type="submit">Partager le rendu</button>
     </form>
