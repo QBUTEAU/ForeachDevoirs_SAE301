@@ -56,9 +56,6 @@ h5{
 }
 
 .profil__signout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: black;
     color: white;
     gap: 10px;
