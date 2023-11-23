@@ -1,7 +1,5 @@
 @import"main.css";
 @import "layout.css";
-@import "main.css";
-@import "layout.css";
 
 body{
     position: relative;
@@ -18,8 +16,12 @@ section{
     margin-left: 20%;
 }
 
+.cent {
+    width: 100%;
+}
+
 form {
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -36,7 +38,7 @@ input{
 input[type="text"],
 input[type="date"],
 input[type="url"] {
-    width: calc(100% - 5px);
+    width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     background-color: #ccc;

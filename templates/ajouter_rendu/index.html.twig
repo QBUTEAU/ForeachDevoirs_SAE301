@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendu</title>
     <link rel="stylesheet" href="{{ asset('assets/css/rendu.css') }}">
+    <script src="{{ asset('assets/js/rendu.js') }}" defer></script>
 </head>
 <body style="flex-container">
     <nav class="navbar">
@@ -48,15 +49,24 @@
     </nav>
     <section class="flex-container align-items-center justify-content-center flex-column">
     <h1>Proposer un rendu :</h1>
-    <form>
+    <form class="flex-container flex-column align-items-center">
+        <div class="flex-container flex-column align-items-start cent">
         <label for="date">Date :<span>*</span></label>
         <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="flex-container flex-column align-items-start cent">
 
         <label for="subject">Module :<span>*</span></label>
         <input type="text" id="subject" name="subject" required placeholder="WR112 - Intégration">
+        </div>
+
+        <div class="flex-container flex-column align-items-start cent">
 
         <label for="details">Détails :<span>*</span></label>
         <input type="text" id="details" name="details" placeholder="Rendre le site web" required>
+        </div>
+        <div class="flex-container flex-column align-items-start cent">
 
         <label for="renderTypeSelect">Type de rendu :<span>*</span></label>
         <select id="renderTypeSelect" name="renderTypeSelect">
@@ -74,11 +84,23 @@
             <option value=".js">.js</option>
             <option value="partiel">Evaluation sur table</option>
         </select>
+        </div>
+        <div class="flex-container flex-column align-items-start cent">
+
+        <select id="tpoutd">
+            <option value="tp">TP</option>
+            <option value="td">TD</option>
+        </select>
+        </div>
+
+        <div class="flex-container flex-column align-items-start cent">
 
         <label for="moodleLink">Lien du rendu</label>
         <input type="url" id="moodleLink" name="moodleLink" placeholder="https://lien-du-rendu.fr">
 
-        <button type="submit">Partager le rendu</button>
+        </div>
+        
+        <button id="submit" type="submit">Partager le rendu</button>
     </form>
 </body>
 </html>
