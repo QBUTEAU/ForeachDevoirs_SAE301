@@ -10,6 +10,8 @@
 
 {% block javascripts %}
 <script defer src="{{ asset('assets/js/index.js') }}"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<script src="{{ asset('assets/js/calendar.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -68,6 +70,9 @@
                     <p>Proposer un rendu</p>
                 </div>
             </a>
+        </div>
+        <div>
+            <div id='calendar' style="width: 75%; margin: 100px auto 300px auto;"></div>
         </div>
     </section>
 </body>
