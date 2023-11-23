@@ -22,3 +22,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
 
 });
+
+document.getElementById('sign-out').addEventListener('click', function(event){
+    localStorage.clear();
+    window.location = "../login";
+    console.log("test")
+})
