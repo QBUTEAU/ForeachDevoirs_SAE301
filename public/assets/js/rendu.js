@@ -13,10 +13,9 @@ submit.addEventListener("click", function (event) {
 
     if (date === "" || subject === "" || details === "" || renderTypeselect === "" || tpoutd === "") {
         alert("Veuillez remplir tous les champs");
-    }
-
-    var tp = "";
-    if(tpoutd === "tp"){
+    } else {
+        var tp = "";
+    if (tpoutd === "tp") {
         var user = localStorage.getItem('user')
         const userJson = JSON.parse(user)
         tp = userJson.groupeTP
@@ -35,16 +34,27 @@ submit.addEventListener("click", function (event) {
         "visibility": false,
     }
 
-    if(tpoutd === "tp"){
+    if (tpoutd === "tp") {
         json["tp"] = tp;
     } else {
         json["td"] = tp;
     }
 
-    if(moodleLink !== "" || moodleLink !== null){
+    if (moodleLink !== "" || moodleLink !== null) {
         json["moodleLink"] = moodleLink;
     }
 
+    var existingData = JSON.parse(localStorage.getItem('data')) || [];
+
+    if (!Array.isArray(existingData)) {
+        existingData = [];
+    }
+    
+    existingData.push(json);
+    localStorage.setItem('data', JSON.stringify(existingData));
+
+
     console.log(json)
+    }
 
 });
