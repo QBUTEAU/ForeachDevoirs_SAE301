@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         imgs[i].style.backgroundSize = "cover";
                     }
                     document.getElementById('name').innerHTML = user.prenom + " " + user.nomDeFamille;
+                    document.getElementById('season').innerHTML = "CM "+ user.promo;
                     document.getElementById('td').innerHTML = "TD "+ user.groupeTD;
                     document.getElementById('tp').innerHTML = "TP " + user.groupeTP;
                     document.getElementById('email').innerHTML = user.prenom.toLowerCase() + "." + user.nomDeFamille.toLowerCase() + "@etudiant.univ-reims.fr";
