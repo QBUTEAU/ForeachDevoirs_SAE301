@@ -1,3 +1,11 @@
+const admin = JSON.parse(localStorage.getItem('user'));
+
+if(!admin.admin === true) {
+    window.location = '/';
+}
+
+console.log(admin.admin);
+
 document.addEventListener('DOMContentLoaded', function () {
     const adminTable = document.getElementById('table');
     var id = localStorage.getItem('id');
