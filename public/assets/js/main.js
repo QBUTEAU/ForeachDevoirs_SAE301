@@ -106,8 +106,7 @@ document.getElementById("search").addEventListener("click", function (event) {
                 div.style.cursor = "pointer";
                 div.style.borderRadius = "10px";
 
-
-
+                var options = { day: 'numeric', month: 'long', year: 'numeric' };
 
                 div.innerHTML = `<p style="margin: 0 20px;">${cours.title}</p><p style="margin: 0 20px;">${cours.date}</p>`;
 

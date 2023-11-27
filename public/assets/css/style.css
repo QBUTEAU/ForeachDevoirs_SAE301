@@ -80,3 +80,38 @@ h1 {
     }
     
 }
+
+#alert {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#alert > .cours {
+    width: 250px;
+    height: 80px;
+    background-color: #b8cbd0;
+    border-radius: 10px;
+    color: #000000;
+}
+
+.cours.active {
+    border: 5px solid cadetblue;
+}
+
+.cours.danger {
+    border: 5px solid red;
+}
+
+.cours.warning {
+    border: 5px solid orange;
+}
+
+@media screen and (max-width: 900px) {
+    #alert {
+        justify-content: center;
+    }
+}

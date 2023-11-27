@@ -71,3 +71,56 @@ function getAllKeysStartingWith(prefix) {
 }
 
 var keysWithDataPrefix = getAllKeysStartingWith('data');
+
+window.addEventListener('resize', function () {
+    var width = window.innerWidth;
+    if (width <= 900) {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            timeZone: 'UTC',
+            initialView: 'dayGridDay',
+            headerToolbar: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'dayGridYear,dayGridWeek,dayGridDay'
+            },
+            editable: true,
+            events: [],
+            eventDisplay: 'list-item',
+            locale: 'fr',
+            eventClick: function (info) {
+                alert('Détails de l\'événement :\n\nTitre : ' + info.event.title + '\nFin : ' + info.event.start);
+            },
+        });
+        calendar.render();
+
+        var user = localStorage.getItem('user')
+        const userJson = JSON.parse(user)
+        const tp = userJson.groupeTP
+
+        async function afficherEventsBase() {
+            fetch("../assets/json/events.json")
+                .then(response => response.json())
+                .then(data => {
+
+                    data.forEach(cours => {
+                        if (cours.tp === tp) {
+                            calendar.addEvent(cours)
+                        }
+                    })
+                })
+        }
+
+        function afficherEventLocalStorage() {
+            for(let i = 0; i < keysWithDataPrefix.length; i++) {
+                data = JSON.parse(localStorage.getItem(keysWithDataPrefix[i]));
+                if(data.visibility === true){
+                    calendar.addEvent(data)
+                }
+            }
+        }
+
+        afficherEventsBase();
+        afficherEventLocalStorage();
+    }
+})
