@@ -63,6 +63,8 @@ document.getElementById("search").addEventListener("click", function (event) {
                             return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                         }
 
+                        console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())))
+                        console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())), cours.id)
                         if (removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase()))) {
                             document.getElementById(cours.id).style.display = "block";
                         } else {
