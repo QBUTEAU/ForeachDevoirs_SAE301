@@ -1,62 +1,112 @@
 [
     {
-        "id": 1,
+        "id": 0,
+        "date": "2023-11-27",
+        "details": "test",
+        "moodleLink": "",
+        "renderType": ".ai",
+        "title": "test",
         "tp": "A",
-        "date": "2023-11-01T08:00:00",
-        "title": "Réunion"
+        "visibility": false
+    },
+    {
+        "id": 1,
+        "date": "2023-11-27",
+        "details": "Lorem ipsum dolor sit amet",
+        "moodleLink": "",
+        "renderType": ".pdf",
+        "title": "Document 1",
+        "tp": "A",
+        "visibility": false
     },
     {
         "id": 2,
-        "td": "CD",
-        "date": "2023-11-03T12:30:00",
-        "title": "Présentation"
+        "date": "2023-11-27",
+        "details": "Consectetur adipiscing elit",
+        "moodleLink": "",
+        "renderType": ".png",
+        "title": "Image 1",
+        "tp": "B",
+        "visibility": true
     },
     {
         "id": 3,
+        "date": "2023-11-27",
+        "details": "Sed do eiusmod tempor incididunt",
+        "moodleLink": "",
+        "renderType": ".jpg",
+        "title": "Image 2",
         "tp": "C",
-        "date": "2023-11-07T10:00:00",
-        "title": "Projet"
+        "visibility": false
     },
     {
         "id": 4,
-        "td": "CD",
-        "date": "2023-11-10T15:45:00",
-        "title": "Formation"
+        "date": "2023-11-27",
+        "details": "Ut labore et dolore magna aliqua",
+        "moodleLink": "",
+        "renderType": ".docx",
+        "title": "Document 2",
+        "tp": "A",
+        "visibility": true
     },
     {
         "id": 5,
-        "tp": "A",
-        "date": "2023-11-14T09:15:00",
-        "title": "Conférence"
+        "date": "2023-11-27",
+        "details": "Duis aute irure dolor in reprehenderit",
+        "moodleLink": "",
+        "renderType": ".mp4",
+        "title": "Video 1",
+        "tp": "B",
+        "visibility": false
     },
     {
         "id": 6,
-        "td": "AB",
-        "date": "2023-11-18T14:00:00",
-        "title": "Réunion"
+        "date": "2023-11-27",
+        "details": "Excepteur sint occaecat cupidatat non proident",
+        "moodleLink": "",
+        "renderType": ".xlsx",
+        "title": "Spreadsheet 1",
+        "tp": "C",
+        "visibility": true
     },
     {
         "id": 7,
-        "tp": "C",
-        "date": "2023-11-21T11:30:00",
-        "title": "Présentation"
+        "date": "2023-11-27",
+        "details": "Sunt in culpa qui officia deserunt mollit anim",
+        "moodleLink": "",
+        "renderType": ".svg",
+        "title": "Vector Image 1",
+        "tp": "A",
+        "visibility": false
     },
     {
         "id": 8,
-        "td": "AB",
-        "date": "2023-11-25T16:20:00",
-        "title": "Projet"
+        "date": "2023-11-27",
+        "details": "Lorem ipsum dolor sit amet",
+        "moodleLink": "",
+        "renderType": ".txt",
+        "title": "Text File 1",
+        "tp": "B",
+        "visibility": true
     },
     {
         "id": 9,
-        "tp": "A",
-        "date": "2023-11-28T09:00:00",
-        "title": "Conférence"
+        "date": "2023-11-27",
+        "details": "Consectetur adipiscing elit",
+        "moodleLink": "",
+        "renderType": ".pptx",
+        "title": "Presentation 1",
+        "tp": "C",
+        "visibility": false
     },
     {
         "id": 10,
-        "td": "AB",
-        "date": "2023-11-30T14:30:00",
-        "title": "Réunion"
+        "date": "2023-11-27",
+        "details": "Sed do eiusmod tempor incididunt",
+        "moodleLink": "",
+        "renderType": ".gif",
+        "title": "Animated Image 1",
+        "tp": "A",
+        "visibility": true
     }
 ]
