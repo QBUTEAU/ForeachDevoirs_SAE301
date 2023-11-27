@@ -77,10 +77,7 @@ document.getElementById("search").addEventListener("click", function (event) {
     var containDiv = document.createElement("div");
     containDiv.style.width = "100%";
     containDiv.style.padding = "50px 0";
-    containDiv.style.position = "absolute";
-    containDiv.style.top = "380px";
-    containDiv.style.left = "50%";
-    containDiv.style.transform = "translate(-50%, -50%)";
+    containDiv.style.marginTop = "50px";
     containDiv.style.display = "flex";
     containDiv.style.flexDirection = "column";
     containDiv.style.alignContent = "center";
@@ -100,7 +97,7 @@ document.getElementById("search").addEventListener("click", function (event) {
                 div.classList.add("cours");
                 div.id = cours.id;
                 div.style.width = "80%";
-                div.style.background = "#6c6c6c";
+                div.style.background = "#344d59";
                 div.style.color = "white";
                 div.style.padding = "10px";
                 div.style.display = "block";
