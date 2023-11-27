@@ -14,6 +14,11 @@ section{
     width: 80%;
     min-height: 100vh;
     margin-left: 20%;
+    background-color: rgb(191, 191, 191);
+}
+
+#burger{
+    display: none;
 }
 
 .cent {
@@ -39,9 +44,8 @@ input[type="text"],
 input[type="date"],
 input[type="url"] {
     width: 100%;
-    padding: 5px;
+    padding: 5px 0px 5px 5px;
     border: 1px solid #ccc;
-    background-color: #ccc;
     margin: 7px 0;
 }
 
@@ -51,7 +55,9 @@ label span{
 }
 
 select{
-    margin-bottom: 7px;
+    margin: 7px 0;
+    border: none;
+    padding: 5px 0px 5px 5px;
 }
 
 button{
@@ -60,11 +66,27 @@ button{
     gap: 10px;
     font-weight: bold;
     font-size: 16px;
-    padding: 5px 25px;
+    padding: 7px 25px;
     border-radius: 10px;
     cursor: pointer;
     border: none;
     text-align: center;
     margin-top: 30px;
-    margin: 0 auto;
+}
+
+@media screen and (max-width:900px){
+    section{
+        width: 100%!important;
+        margin-left: 0px!important;
+    }
+    #burger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        fill: black!important;
+    }
+    form{
+        width: 70%;
+    }
 }

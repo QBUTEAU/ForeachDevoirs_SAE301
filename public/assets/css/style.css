@@ -24,8 +24,12 @@ h1 {
     text-align: center;
 }
 
+#burger{
+    display: none;
+}
+
 .nom-proposer{
-padding: 20px;
+    padding: 20px;
 }
 
 .nom-proposer__button{
@@ -43,4 +47,28 @@ padding: 20px;
 }
 .nom-proposer__button p{
     margin: 0;
+}
+
+@media screen and (max-width: 900px){
+    #burger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        fill: black!important;
+    }
+    section{
+        width: 100%!important;
+        margin-left: 0px!important;
+    }
+    .nom-proposer{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+    .fc-toolbar-title{
+        font-size: 1.5em!important;
+    }
+    
 }

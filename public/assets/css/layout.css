@@ -42,6 +42,26 @@
     border-radius: 50%;
 }
 
+#close-burger{
+    display: none;
+}
+
 #username{
     font-size: 18px;
+}
+
+@media screen and (max-width: 900px){
+    .navbar{
+        display: none;
+        position : absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+    }
+    #close-burger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 }

@@ -17,6 +17,9 @@ section{
     background-color: rgb(191, 191, 191);
     margin-left: 20%;
 }
+#burger{
+    display: none;
+}
 
 .profil{
     width: max-content;
@@ -65,4 +68,18 @@ h5{
     border-radius: 10px;
     cursor: pointer;
     border: none;
+}
+
+@media screen and (max-width: 900px){
+    section{
+        width: 100%!important;
+        margin-left: 0!important;
+    }
+    #burger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        fill: black!important;
+    }
 }
