@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
             events: [],
             eventDisplay: 'list-item',
             locale: 'fr',
+            eventClick: function (info) {
+                alert('Détails de l\'événement :\n\nTitre : ' + info.event.title + '\nFin : ' + info.event.start);
+            },
         }
 
         var calendar = new FullCalendar.Calendar(calendarEl, params);
