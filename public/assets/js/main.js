@@ -23,15 +23,14 @@ document.getElementById("search").addEventListener("click", function (event) {
     var input = document.createElement("input");
     input.id = "inputSearch";
     input.style.position = "absolute";
-    input.style.top = "50%";
+    input.style.top = "50px";
     input.style.left = "50%";
     input.style.transform = "translate(-50%, -50%)";
-    input.style.width = "50%";
-    input.style.height = "50px";
-    input.style.borderRadius = "20px";
-    input.style.border = "none";
-    input.style.padding = "0 20px";
-    input.style.fontSize = "18px";
+    input.style.border = "1px solid var(--dark)";
+    input.style.textIndent = "10px";
+    input.style.borderRadius = "5px";
+    input.style.width = "80%";
+    input.style.padding = "17px 0";
 
     var cross = document.createElement("i");
     cross.id = "cross";
@@ -75,6 +74,21 @@ document.getElementById("search").addEventListener("click", function (event) {
             });
     });
 
+    var containDiv = document.createElement("div");
+    containDiv.style.width = "100%";
+    containDiv.style.padding = "50px 0";
+    containDiv.style.position = "absolute";
+    containDiv.style.top = "380px";
+    containDiv.style.left = "50%";
+    containDiv.style.transform = "translate(-50%, -50%)";
+    containDiv.style.display = "flex";
+    containDiv.style.flexDirection = "column";
+    containDiv.style.alignContent = "center";
+    containDiv.style.justifyContent = "center";
+    containDiv.style.gap = "20px";
+    containDiv.style.alignItems = "center";
+
+
     fetch("../assets/json/events.json").then(response => response.json()).then(data => {
         var user = JSON.parse(localStorage.getItem("user"));
         var tp = user.groupeTP;
@@ -85,19 +99,34 @@ document.getElementById("search").addEventListener("click", function (event) {
                 var div = document.createElement("div");
                 div.classList.add("cours");
                 div.id = cours.id;
-                div.style.width = "100%";
-                div.style.height = "50px";
-                div.style.borderBottom = "1px solid white";
+                div.style.width = "80%";
+                div.style.background = "#6c6c6c";
                 div.style.color = "white";
-                div.style.display = "flex";
+                div.style.padding = "10px";
+                div.style.display = "block";
                 div.style.alignItems = "center";
                 div.style.justifyContent = "space-between";
                 div.style.cursor = "pointer";
+                div.style.borderRadius = "10px";
+
+
+
+
                 div.innerHTML = `<p style="margin: 0 20px;">${cours.title}</p><p style="margin: 0 20px;">${cours.date}</p>`;
-                background.appendChild(div);
+
+                if(cours.tp) {
+                    div.innerHTML += `<p style="margin: 0 20px;">TP : ${cours.tp}</p>`;
+                }
+
+                if(cours.td) {
+                    div.innerHTML += `<p style="margin: 0 20px;">TD : ${cours.td}</p>`;
+                }
+
+                containDiv.appendChild(div);
             }
         });
     })
+    background.appendChild(containDiv);
     background.appendChild(cross);
     background.appendChild(input);
     document.body.appendChild(background);

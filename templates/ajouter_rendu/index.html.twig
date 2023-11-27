@@ -68,7 +68,13 @@
             <div class="flex-container flex-column align-items-start cent">
 
             <label for="subject">Module :<span>*</span></label>
-            <input type="text" id="subject" name="subject" required placeholder="WR112 - Intégration">
+            <select id="subject" name="subject" required>
+                <option value="WR304 - Culture numérique">WR304 - Culture numérique</option>
+                <option value="WR312 - Integration web">WR312 - Integration web</option>
+                <option value="WR303 UX design d'expérience">WR303 UX design d'expérience</option>
+                <option value="WR313 - Développement Back">WR313 - Développement Back</option>
+                <option value="WR311 - Audiovisuel & motion design">WR311 - Audiovisuel & motion design</option>
+            </select>
             </div>
 
             <div class="flex-container flex-column align-items-start cent">
@@ -96,9 +102,8 @@
                     <option value="partiel">Evaluation sur table</option>
                 </select>
                 </div>
-                <div class="flex-container flex-column align-items-end cent">
-                <label for="renderClasseSelect">TP ou TD :<span>*</span></label>
-                <select id="tpoutd" name="renderClasseSelect">
+                <div class="flex-container flex-column align-items-end">
+                <select id="tpoutd">
                     <option value="tp">TP</option>
                     <option value="td">TD</option>
                 </select>
