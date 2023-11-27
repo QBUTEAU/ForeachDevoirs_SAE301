@@ -1,8 +1,10 @@
+@import "main.css";
+
 .navbar{
     position: fixed;
     height: 100%;
     width: 20%;
-    background-color: black;
+    background-color: #344d59;
     color: white;
     display: flex;
     flex-direction: column;

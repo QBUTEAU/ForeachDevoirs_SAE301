@@ -1,6 +1,14 @@
 @import "main.css";
 @import "layout.css";
 
+:root{
+    --light: #B8CBD0;
+    --blue-grey: #7A90A4;
+    --dark: #344d59;
+    --blue:#137C8B;
+    --light-blue: #709CA7;
+}
+
 body{
     position: relative;
     margin: 0;
@@ -13,8 +21,8 @@ body{
 section{
     width: 80%;
     min-height: 100vh;
-    background-color: rgb(191, 191, 191);
     margin-left: 20%;
+    background-color: var(--light);
 }
 
 h1 {
@@ -38,7 +46,7 @@ h1 {
 .nom-proposer__button > div{
     gap: 15px;
     font-size: 15px;
-    background-color: black;
+    background-color: var(--dark);
     color: white;
     font-weight: bold;
     padding: 7px 20px;

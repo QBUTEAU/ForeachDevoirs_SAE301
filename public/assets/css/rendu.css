@@ -1,6 +1,14 @@
 @import"main.css";
 @import "layout.css";
 
+:root{
+    --light: #B8CBD0;
+    --blue-grey: #7A90A4;
+    --dark: #344d59;
+    --blue:#137C8B;
+    --light-blue: #709CA7;
+}
+
 body{
     position: relative;
     margin: 0;
@@ -14,7 +22,7 @@ section{
     width: 80%;
     min-height: 100vh;
     margin-left: 20%;
-    background-color: rgb(191, 191, 191);
+    background-color: var(--light);
 }
 
 #burger{
@@ -61,7 +69,7 @@ select{
 }
 
 button{
-    background-color: black;
+    background-color: var(--dark);
     color: white;
     gap: 10px;
     font-weight: bold;
@@ -72,6 +80,9 @@ button{
     border: none;
     text-align: center;
     margin-top: 30px;
+}
+svg{
+    fill: white!important;
 }
 
 @media screen and (max-width:900px){

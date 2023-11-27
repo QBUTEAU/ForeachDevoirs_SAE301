@@ -1,6 +1,14 @@
 @import 'main.css';
 @import 'layout.css';
 
+:root{
+    --light: #B8CBD0;
+    --blue-grey: #7A90A4;
+    --dark: #344d59;
+    --blue:#137C8B;
+    --light-blue: #709CA7;
+}
+
 body{
     position: relative;
     margin: 0;
@@ -14,7 +22,7 @@ section{
     gap: 60px;
     width: 80%;
     min-height: 100vh;
-    background-color: rgb(191, 191, 191);
+    background-color: var(--light);
     margin-left: 20%;
 }
 #burger{
@@ -26,7 +34,8 @@ section{
     gap: 15px;
     border: 2px black solid;
     padding: 30px;
-    background-color: antiquewhite;
+    background-color: var(--blue-grey);
+    color: white;
     border-radius: 15px;
 
 }
@@ -59,7 +68,7 @@ h5{
 }
 
 .profil__signout{
-    background-color: black;
+    background-color: var(--dark);
     color: white;
     gap: 10px;
     font-weight: bold;
