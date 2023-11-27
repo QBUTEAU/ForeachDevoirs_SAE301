@@ -32,7 +32,7 @@ section{
 .profil{
     width: max-content;
     gap: 15px;
-    border: 2px black solid;
+    border: 2px var(--dark) solid;
     padding: 30px;
     background-color: var(--blue-grey);
     color: white;

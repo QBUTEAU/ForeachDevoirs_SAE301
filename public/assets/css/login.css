@@ -1,5 +1,13 @@
 @import "main.css";
 
+:root{
+    --light: #B8CBD0;
+    --blue-grey: #7A90A4;
+    --dark: #344d59;
+    --blue:#137C8B;
+    --light-blue: #709CA7;
+}
+
 body {
     background: url("../image/school.jpg") no-repeat center center fixed;
     height: 100vh;
@@ -20,15 +28,16 @@ h1 {
 
 .connexion_form {
     max-width: 500px;
-    background: #948e8e;
+    background: var(--blue-grey);
     height: auto;
     padding: 40px 60px;
     border-radius: 8px;
     margin: 0 20px;
+    border: 1px var(--dark) solid;
 }
 
 .connexion_form > .flex-container > input[type="text"], .connexion_form > .flex-container > input[type="password"] {
-    border: 1px solid #9e9e9e;
+    border: 1px solid var(--dark);
     text-indent: 10px;
     border-radius: 5px;
     width: 100%;
@@ -36,13 +45,16 @@ h1 {
 }
 
 .connexion_form > .flex-container > input[type="submit"] {
-    background: #564e4e;
+    background: var(--dark);
     color: #ffffff;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: fit-content;
-    padding: 12px;
+    padding: 7px 20px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .connexion_form > .flex-container > label {
