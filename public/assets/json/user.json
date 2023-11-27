@@ -38,11 +38,11 @@
       "prenom": "Emilien",
       "nomDeFamille": "Rozier",
       "promo" : "S3",
-      "groupeTP": "A",
-      "groupeTD": "AB",
+      "groupeTP": "C",
+      "groupeTD": "CD",
       "password": "1234",
       "image": "https://www.w3schools.com/howto/img_avatar.png",
-      "admin": false
+      "admin": true
     }
   ]
 }

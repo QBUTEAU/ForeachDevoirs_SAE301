@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             editable: true,
             events: [],
-            eventDisplay: 'list-item'
+            eventDisplay: 'list-item',
+            locale: 'fr',
         }
 
         var calendar = new FullCalendar.Calendar(calendarEl, params);
