@@ -1,36 +1,30 @@
 [
     {
         "tp": "A",
-        "td": "AB",
         "date": "2023-11-01T08:00:00",
         "title": "Réunion"
     },
     {
-        "tp": "B",
         "td": "CD",
         "date": "2023-11-03T12:30:00",
         "title": "Présentation"
     },
     {
         "tp": "C",
-        "td": "AB",
         "date": "2023-11-07T10:00:00",
         "title": "Projet"
     },
     {
-        "tp": "D",
         "td": "CD",
         "date": "2023-11-10T15:45:00",
         "title": "Formation"
     },
     {
         "tp": "A",
-        "td": "CD",
         "date": "2023-11-14T09:15:00",
         "title": "Conférence"
     },
     {
-        "tp": "B",
         "td": "AB",
         "date": "2023-11-18T14:00:00",
         "title": "Réunion"
@@ -42,19 +36,16 @@
         "title": "Présentation"
     },
     {
-        "tp": "D",
         "td": "AB",
         "date": "2023-11-25T16:20:00",
         "title": "Projet"
     },
     {
         "tp": "A",
-        "td": "CD",
         "date": "2023-11-28T09:00:00",
         "title": "Conférence"
     },
     {
-        "tp": "B",
         "td": "AB",
         "date": "2023-11-30T14:30:00",
         "title": "Réunion"
