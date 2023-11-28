@@ -12,6 +12,10 @@
     align-items: center;
     font-weight: bold;
 }
+.navbar__logo img{
+    width: 150px;
+    margin-bottom: 30px;
+}
 .navbar ul{
     margin: 0;
     list-style: none;
