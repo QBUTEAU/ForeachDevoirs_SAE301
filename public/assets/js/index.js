@@ -34,6 +34,10 @@ var userId = localStorage.getItem("id");
             var date = new Date();
             data.forEach(cours => {
 
+                if(cours.visibility === false){
+                    return;
+                }
+
                 if (cours.tp === tp || cours.td === td) {
 
                     if(counters >= maxer){
@@ -92,11 +96,16 @@ var userId = localStorage.getItem("id");
             var days = diff / (1000 * 60 * 60 * 24);
             console.log(days);
 
+            if(cours.visibility === false){
+                return;
+            }
+
             var div = document.createElement("div");
 
             if(date === cours.date){
                 div.classList.add("danger")
             }
+
 
             if (days < 0) {
                 div.style.display = "none";
