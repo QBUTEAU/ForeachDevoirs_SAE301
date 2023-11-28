@@ -9,7 +9,7 @@
 }
 
 body {
-    background: url("../image/school.jpg") no-repeat center center fixed;
+    background: url("../image/school.webp") no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
     overflow: hidden;
