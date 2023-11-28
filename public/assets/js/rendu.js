@@ -57,6 +57,16 @@ submit.addEventListener("click", function (event) {
         localStorage.setItem(`data${i}`, JSON.stringify(json));
 
         console.log(json)
+
+        var error = document.getElementById("error");
+        var sucess = document.getElementById("sucess");
+
+        error.style.display = "none";
+        sucess.style.display = "block";
+        sucess.innerHTML = "Ajout réussi, redirection en cours...";
+        setTimeout(function () {
+            window.location = "../";
+        }, 3000);
     }
 
 });
