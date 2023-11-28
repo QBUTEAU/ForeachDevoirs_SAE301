@@ -54,7 +54,7 @@ var userId = localStorage.getItem("id");
                     }
 
 
-                    div.innerHTML = cours.title + " - " + cours.date;
+                    div.innerHTML = cours.title + "<br>" + cours.date;
                     alert.appendChild(div);
                 }
 
