@@ -66,16 +66,23 @@ function visible(i) {
             "title": data.title,
             "details": data.details,
             "renderType": data.renderType,
-            "visibility": true
+            "visibility": true,
+            "tp": data.tp,
+            "td": data.td
         }
+
+
     } else {
         newData = {
             "date": data.date,
             "title": data.title,
             "details": data.details,
             "renderType": data.renderType,
-            "visibility": false
+            "visibility": false,
+            "tp": data.tp,
+            "td": data.td
         }
+
     }
 
     localStorage.setItem(key, JSON.stringify(newData))
