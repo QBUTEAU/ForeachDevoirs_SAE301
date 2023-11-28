@@ -31,7 +31,7 @@
       "groupeTD": "AB",
       "password": "1234",
       "image": "https://www.w3schools.com/howto/img_avatar.png",
-      "admin": false
+      "admin": true
     },
     {
       "id": "mmi22h13",
