@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 
+
+
 document.getElementById("search").addEventListener("click", function (event) {
     var background = document.createElement("div");
     background.id = "blackBackground";
@@ -19,6 +21,8 @@ document.getElementById("search").addEventListener("click", function (event) {
     background.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
     background.style.backdropFilter = "blur(5px)";
     background.style.zIndex = "1000";
+
+
 
     var input = document.createElement("input");
     input.id = "inputSearch";
@@ -68,8 +72,6 @@ document.getElementById("search").addEventListener("click", function (event) {
                             return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                         }
 
-                        console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())))
-                        console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())), cours.id)
                         if (removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase()))) {
                             document.getElementById(cours.id).style.display = "block";
                         } else {
@@ -78,6 +80,31 @@ document.getElementById("search").addEventListener("click", function (event) {
                     }
                 });
             });
+        var keys = Object.keys(localStorage),
+            i = keys.length;
+        while (i--) {
+            if (keys[i].startsWith("data")) {
+                var courss = JSON.parse(localStorage.getItem(keys[i]));
+
+                var user = JSON.parse(localStorage.getItem("user"));
+                var tp = user.groupeTP;
+                var td = user.groupeTD;
+
+                if (courss.tp === tp || courss.td === td) {
+                    function removeAccents(str) {
+                        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                    }
+
+                    console.log(removeAccents(courss.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())))
+                    if (removeAccents(courss.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase()))) {
+                        document.getElementById(courss.id).style.display = "block";
+                    } else {
+                        document.getElementById(courss.id).style.display = "none";
+                    }
+                }
+
+            }
+        }
     });
 
     var containDiv = document.createElement("div");
@@ -128,6 +155,42 @@ document.getElementById("search").addEventListener("click", function (event) {
             }
         });
     })
+    var keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while (i--) {
+        if (keys[i].startsWith("data")) {
+            var data = JSON.parse(localStorage.getItem(keys[i]));
+            var div = document.createElement("div");
+            div.classList.add("cours");
+            div.id = data.id;
+            div.style.width = "80%";
+            div.style.background = "#344d59";
+            div.style.color = "white";
+            div.style.padding = "10px";
+            div.style.display = "block";
+            div.style.alignItems = "center";
+            div.style.justifyContent = "space-between";
+            div.style.cursor = "pointer";
+            div.style.borderRadius = "10px";
+
+            var options = { day: 'numeric', month: 'long', year: 'numeric' };
+
+            div.innerHTML = `<p style="margin: 0 20px;">${data.title}</p><p style="margin: 0 20px;">${data.date}</p>`;
+
+            if(data.tp) {
+                div.innerHTML += `<p style="margin: 0 20px;">TP : ${data.tp}</p>`;
+            }
+
+            if(data.td) {
+                div.innerHTML += `<p style="margin: 0 20px;">TD : ${data.td}</p>`;
+            }
+
+            containDiv.appendChild(div);
+
+        }
+        }
+
     background.appendChild(containDiv);
     background.appendChild(cross);
     background.appendChild(input);
@@ -197,8 +260,6 @@ document.addEventListener("keydown", function (event) {
                                 return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                             }
 
-                            console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())))
-                            console.log(removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase())), cours.id)
                             if (removeAccents(cours.title.toLowerCase()).includes(removeAccents(input.value.toLowerCase()))) {
                                 document.getElementById(cours.id).style.display = "block";
                             } else {
@@ -206,7 +267,12 @@ document.addEventListener("keydown", function (event) {
                             }
                         }
                     });
+
+
+
+
                 });
+
         });
 
         var containDiv = document.createElement("div");
