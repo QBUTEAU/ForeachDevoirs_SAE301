@@ -20,6 +20,9 @@ var userId = localStorage.getItem("id");
             window.location = "/login";
         });
 
+    var maxer = 6;
+    var counters = 0;
+
     fetch("../assets/json/events.json")
         .then(response => response.json())
         .then(data => {
@@ -32,6 +35,10 @@ var userId = localStorage.getItem("id");
             data.forEach(cours => {
 
                 if (cours.tp === tp || cours.td === td) {
+
+                    if(counters >= maxer){
+                        return;
+                    }
 
                     var date = new Date();
                     var dateComparee = new Date(cours.date);
@@ -56,6 +63,7 @@ var userId = localStorage.getItem("id");
 
                     div.innerHTML = cours.title + "<br>" + cours.date;
                     alert.appendChild(div);
+                    counters++;
                 }
 
             })
@@ -65,8 +73,18 @@ var userId = localStorage.getItem("id");
     var keys = Object.keys(localStorage),
         i = keys.length;
 
+    var counter = 0;
+    var max = 5;
+
     while (i--) {
         if (keys[i].startsWith("data")) {
+
+            if(counter >= max){
+                break;
+            }
+
+
+
             var cours = JSON.parse(localStorage.getItem(keys[i]));
             var date = new Date();
             var dateComparee = new Date(cours.date);
@@ -91,6 +109,7 @@ var userId = localStorage.getItem("id");
             div.classList.add("cours");
             div.innerHTML = cours.title + " <br> " + cours.date;
             document.getElementById("alert").appendChild(div);
+            counter++;
         }
     }
 
