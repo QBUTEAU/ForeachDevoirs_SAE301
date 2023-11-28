@@ -89,7 +89,7 @@ var userId = localStorage.getItem("id");
             }
 
             div.classList.add("cours");
-            div.innerHTML = cours.title + " - " + cours.date;
+            div.innerHTML = cours.title + " <br> " + cours.date;
             document.getElementById("alert").appendChild(div);
         }
     }
