@@ -25,8 +25,12 @@ submit.addEventListener("click", function (event) {
             tp = userJson.groupeTD
         }
 
+        function generateNumberId() {
+    return Math.floor(Math.random() * 10000000000) + 50;
+        }
 
         var json = {
+            "id": generateNumberId(),
             "date": date,
             "title": subject,
             "details": details,
@@ -71,11 +75,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         imgs[i].style.backgroundImage = "url('" + user.image + "')";
                         imgs[i].style.backgroundSize = "cover";
                     }
-                    document.getElementById('name').innerHTML = user.prenom + " " + user.nomDeFamille;
-                    document.getElementById('season').innerHTML = "CM "+ user.promo;
-                    document.getElementById('td').innerHTML = "TD "+ user.groupeTD;
-                    document.getElementById('tp').innerHTML = "TP " + user.groupeTP;
-                    document.getElementById('email').innerHTML = user.prenom.toLowerCase() + "." + user.nomDeFamille.toLowerCase() + "@etudiant.univ-reims.fr";
                 }
             });
         })

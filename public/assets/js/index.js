@@ -41,15 +41,19 @@ var userId = localStorage.getItem("id");
                     var div = document.createElement("div");
                     div.classList.add("cours");
 
-                    if (days < 0) {
+                    if(date === cours.date){
                         div.classList.add("danger")
+                    }
+
+                    if (days < 0) {
+                        div.style.display = "none";
                     } else if (days < 7) {
                         div.classList.add("warning")
                     } else {
                         div.classList.add("active")
                     }
 
-                    div.id = cours.id;
+
                     div.innerHTML = cours.title + " - " + cours.date;
                     alert.appendChild(div);
                 }
@@ -72,8 +76,12 @@ var userId = localStorage.getItem("id");
 
             var div = document.createElement("div");
 
-            if (days < 0) {
+            if(date === cours.date){
                 div.classList.add("danger")
+            }
+
+            if (days < 0) {
+                div.style.display = "none";
             } else if (days < 7) {
                 div.classList.add("warning")
             } else {
@@ -81,12 +89,10 @@ var userId = localStorage.getItem("id");
             }
 
             div.classList.add("cours");
-            div.id = keys[i];
             div.innerHTML = cours.title + " - " + cours.date;
             document.getElementById("alert").appendChild(div);
         }
     }
-
 
 });
 
