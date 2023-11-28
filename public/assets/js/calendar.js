@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 center: 'title',
                 right: 'dayGridYear,dayGridWeek,dayGridDay'
             },
-            editable: true,
+            editable: false,
             events: [],
             eventDisplay: 'list-item',
             locale: 'fr',
