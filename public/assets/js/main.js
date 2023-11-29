@@ -53,7 +53,7 @@ function search() {
     cross.classList.add("fa-times");
     cross.style.position = "absolute";
     cross.style.top = "50px";
-    cross.style.right = "5%";
+    cross.style.right = "2%";
     cross.style.transform = "translate(-50%, -50%)";
     cross.style.fontSize = "30px";
     cross.style.color = "white";

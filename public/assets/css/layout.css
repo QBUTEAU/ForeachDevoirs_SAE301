@@ -70,4 +70,7 @@
         top: 20px;
         right: 20px;
     }
+    .no-scroll{
+        overflow: hidden;
+    }
 }
