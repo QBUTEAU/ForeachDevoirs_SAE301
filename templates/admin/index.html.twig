@@ -2,6 +2,11 @@
 
 {% block title %}Hello AdminController!{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}">
+{% endblock %}
+
 {% block javascripts %}
 <script src='{{ "../assets/js/admin.js" }}'> </script>
 {% endblock %}
@@ -12,7 +17,7 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
+<section class="flex-container flex-column">
     <h1>Admin Table</h1>
 
     <style>
@@ -27,5 +32,5 @@
 
     <div id="table"></div>
     
-</div>
+</section>
 {% endblock %}

@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 document.getElementById('sign-out').addEventListener('click', function(event){
-    localStorage.clear();
+    localStorage.removeItem('id');
+    localStorage.removeItem('user');
     window.location = "../login";
     console.log("test")
 })

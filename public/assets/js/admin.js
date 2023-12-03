@@ -1,10 +1,8 @@
 const admin = JSON.parse(localStorage.getItem('user'));
 
-if(!admin.admin === true) {
+if (!admin.admin === true) {
     window.location = '/';
 }
-
-console.log(admin.admin);
 
 document.addEventListener('DOMContentLoaded', function () {
     const adminTable = document.getElementById('table');
@@ -25,15 +23,28 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < keysWithDataPrefix.length; i++) {
         var item = localStorage.getItem(keysWithDataPrefix[i]);
         const itemJson = JSON.parse(item);
-        contentTable += `
+
+        if (itemJson.tp === admin.groupeTP) {
+            contentTable += `
         <tr>
         <td>${itemJson.date}</td>
         <td>${itemJson.title}</td>
         <td>${itemJson.renderType}</td>
         <td>${itemJson.details}</td>
-        <td><button onclick="visible(${i})">${itemJson.visibility}</button></td>
+        <td><button onclick="visible(${i})">${itemJson.visibility === true ? 'rendre invisible' : 'rendre visible'}</button></td>
         </tr>
         `
+        } else if(itemJson.td === admin.groupeTD) {
+            contentTable += `
+            <tr>
+            <td>${itemJson.date}</td>
+            <td>${itemJson.title}</td>
+            <td>${itemJson.renderType}</td>
+            <td>${itemJson.details}</td>
+            <td><button onclick="visible(${i})">${itemJson.visibility === true ? 'rendre invisible' : 'rendre visible'}</button></td>
+            </tr>
+            `
+        }
     }
 
     adminTable.innerHTML = headTable + contentTable + '</table>'

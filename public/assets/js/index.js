@@ -124,6 +124,4 @@ var userId = localStorage.getItem("id");
 
 });
 
-document.getElementById("username").addEventListener("click", function(event) {
 
-})

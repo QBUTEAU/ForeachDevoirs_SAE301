@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var user = localStorage.getItem('user')
         const userJson = JSON.parse(user)
         const tp = userJson.groupeTP
+        const td = userJson.groupeTD
 
         async function afficherEventsBase() {
             fetch("../assets/json/events.json")
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(data => {
 
                     data.forEach(cours => {
-                        if (cours.tp === tp) {
+                        if (cours.tp === tp || cours.td === td ) {
                             calendar.addEvent(cours)
                         }
                     })
@@ -40,10 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function afficherEventLocalStorage() {
-            for(let i = 0; i < keysWithDataPrefix.length; i++) {
+            for (let i = 0; i < keysWithDataPrefix.length; i++) {
                 data = JSON.parse(localStorage.getItem(keysWithDataPrefix[i]));
-                if(data.visibility === true){
-                    calendar.addEvent(data)
+                if (data.visibility === true) {
+                    if (data.tp === tp || data.td === td) {
+                        calendar.addEvent(data)
+                    }
+                    
                 }
             }
         }
@@ -112,9 +116,9 @@ window.addEventListener('resize', function () {
         }
 
         function afficherEventLocalStorage() {
-            for(let i = 0; i < keysWithDataPrefix.length; i++) {
+            for (let i = 0; i < keysWithDataPrefix.length; i++) {
                 data = JSON.parse(localStorage.getItem(keysWithDataPrefix[i]));
-                if(data.visibility === true){
+                if (data.visibility === true) {
                     calendar.addEvent(data)
                 }
             }
