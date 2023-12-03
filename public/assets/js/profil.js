@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         imgs[i].style.backgroundImage = "url('" + user.image + "')";
                         imgs[i].style.backgroundSize = "cover";
                     }
+
+                    document.getElementById('img').style.backgroundImage = "url('" + user.image + "')";
+                    document.getElementById('img').style.backgroundSize = "cover";
                     document.getElementById('name').innerHTML = user.prenom + " " + user.nomDeFamille;
                     document.getElementById('season').innerHTML = "CM "+ user.promo;
                     document.getElementById('td').innerHTML = "TD "+ user.groupeTD;
