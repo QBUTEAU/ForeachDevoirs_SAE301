@@ -16,7 +16,6 @@ Alimenté par le framework Symfony, l'application possède un système de stocka
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![Symfony Badge](https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white)
-![Twig](https://img.shields.io/badge/Twig-%2378C9D4.svg?style=for-the-badge&logo=twig&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) 
 
 ### © 2023 [Corentin Nelhomme](https://github.com/D3ller) - [Emilien Rozier](https://github.com/EmilienRozier) - [Quentin Buteau](http://qbuteau.fr) - [Richard Quin](https://github.com/RichardQuin) | Tous droits réservés
